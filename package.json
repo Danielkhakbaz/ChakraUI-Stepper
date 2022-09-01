@@ -6,10 +6,24 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx",
+    "check-all": "yarn check-types && yarn check-format && yarn check-lint",
+    "fix": "next lint --fix && prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.3.1",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11",
+    "chakra-ui-steps": "^1.7.4",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "framer-motion": "^6",
     "next": "12.2.5",
+    "prettier": "^2.7.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
@@ -17,8 +31,15 @@
     "@types/node": "18.7.14",
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
-    "eslint": "8.23.0",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
     "eslint-config-next": "12.2.5",
-    "typescript": "4.8.2"
+    "eslint-config-standard-with-typescript": "^22.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.31.1",
+    "husky": "^8.0.0",
+    "typescript": "*"
   }
 }
