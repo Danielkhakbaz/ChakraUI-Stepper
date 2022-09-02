@@ -1,0 +1,25 @@
+@font-face {
+  font-family: IRANSans;
+  src: url(../../assets/fonts/iran-sans.ttf);
+}
+
+* {
+  font-family: IRANSans !important;
+  scroll-behavior: smooth;
+}
+html:focus-within {
+  scroll-behavior: smooth;
+}
+.hi .ant-picker-panel .ant-picker-date-panel .ant-picker-body {
+  width: 70%;
+}
+.hi .ant-picker-calendar-date-content {
+  height: 10px;
+}
+.hi
+  .ant-picker-panel
+  .ant-picker-date-panel
+  .ant-picker-body
+  .ant-picker-cell-inner {
+  height: 50px;
+}
